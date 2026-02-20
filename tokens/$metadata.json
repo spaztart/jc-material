@@ -1,0 +1,18 @@
+{
+  "tokenSetOrder": [
+    "material/default",
+    "material/rga",
+    "modes/default/light",
+    "modes/default/light-medium-contrast",
+    "modes/default/light-high-contrast",
+    "modes/default/dark",
+    "modes/default/dark-medium-contrast",
+    "modes/default/dark-high-contrast",
+    "modes/rga/light",
+    "modes/rga/light-medium-contrast",
+    "modes/rga/light-high-contrast",
+    "modes/rga/dark",
+    "modes/rga/dark-medium-contrast",
+    "modes/rga/dark-high-contrast"
+  ]
+}

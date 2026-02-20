@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Companion Components Demo</title>
+  
+  <link rel="stylesheet" href="../material-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--md-sys-typescale-body-large-font);
+      background-color: var(--md-sys-color-background);
+      color: var(--md-sys-color-on-background);
+      min-height: 100vh;
+    }
+
+    .demo-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .demo-section {
+      margin-bottom: 48px;
+    }
+
+    .demo-section h1 {
+      font-family: var(--md-sys-typescale-display-small-font);
+      font-size: var(--md-sys-typescale-display-small-size);
+      font-weight: var(--md-sys-typescale-display-small-weight);
+      color: var(--md-sys-color-primary);
+      margin-bottom: 16px;
+    }
+
+    .demo-section h2 {
+      font-family: var(--md-sys-typescale-headline-small-font);
+      font-size: var(--md-sys-typescale-headline-small-size);
+      font-weight: var(--md-sys-typescale-headline-small-weight);
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+
+    .demo-section p {
+      font-family: var(--md-sys-typescale-body-medium-font);
+      font-size: var(--md-sys-typescale-body-medium-size);
+      color: var(--md-sys-color-on-surface-variant);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .component-showcase {
+      background-color: var(--md-sys-color-surface);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--md-sys-color-outline-variant);
+    }
+
+    .component-showcase h3 {
+      font-family: var(--md-sys-typescale-title-medium-font);
+      font-size: var(--md-sys-typescale-title-medium-size);
+      font-weight: var(--md-sys-typescale-title-medium-weight);
+      margin-bottom: 16px;
+    }
+
+    .preview-frame {
+      background-color: var(--md-sys-color-surface-container-low);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .code-block {
+      background-color: var(--md-sys-color-surface-container-highest);
+      border-radius: 8px;
+      padding: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      overflow-x: auto;
+      margin-top: 16px;
+    }
+
+    .code-block code {
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .event-log {
+      background-color: var(--md-sys-color-surface-container);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+      min-height: 100px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .event-log h4 {
+      font-family: var(--md-sys-typescale-title-small-font);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .event-item {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      padding: 4px 0;
+      color: var(--md-sys-color-on-surface-variant);
+    }
+
+    .mobile-frame {
+      max-width: 395px;
+      margin: 0 auto;
+      border: 2px solid var(--md-sys-color-outline-variant);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <div class="demo-section">
+      <h1>Safety Companion Components</h1>
+      <p>
+        A collection of custom web components built with Material Web and RGA design tokens.
+        These components follow Material Design 3 principles and use the Safety Companion design system.
+      </p>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-top-navbar</h2>
+      <p>
+        Primary, fixed top navigation element used across the app. It anchors global navigation controls
+        and remains visible as users move through the experience.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Default State</h3>
+        <div class="preview-frame mobile-frame">
+          <sc-top-navbar></sc-top-navbar>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-top-navbar&gt;&lt;/sc-top-navbar&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>With Notification Badge (Red Dot)</h3>
+        <div class="preview-frame mobile-frame">
+          <sc-top-navbar notification-count="true"></sc-top-navbar>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-top-navbar notification-count="true"&gt;&lt;/sc-top-navbar&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Without Logo</h3>
+        <div class="preview-frame mobile-frame">
+          <sc-top-navbar show-logo="false" notification-count="true"></sc-top-navbar>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-top-navbar show-logo="false" notification-count="true"&gt;&lt;/sc-top-navbar&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame mobile-frame">
+          <sc-top-navbar id="interactive-navbar" notification-count="true"></sc-top-navbar>
+        </div>
+        <div class="event-log">
+          <h4>Event Log:</h4>
+          <div id="event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-logo</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide the centered logo</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-notification</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide the notification button</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>notification-count</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">""</td>
+                <td style="padding: 12px;">Shows red dot badge when set to any truthy value</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>menu-click</code></td>
+                <td style="padding: 12px;">Fired when the menu button is clicked</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>notification-click</code></td>
+                <td style="padding: 12px;">Fired when the notification button is clicked</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-chat-bubble</h2>
+      <p>
+        Standard message container used in conversational flows. Mirrors the interaction and visual behavior
+        of ChatGPT's chat bubbles with Send (user) and Reply (assistant) variants.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Send Variant (User Message)</h3>
+        <div class="preview-frame">
+          <sc-chat-bubble chat="Send" message="Hello! How can I help you today?"></sc-chat-bubble>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-chat-bubble chat="Send" message="Hello! How can I help you today?"&gt;&lt;/sc-chat-bubble&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Reply Variant (Assistant Message)</h3>
+        <div class="preview-frame">
+          <sc-chat-bubble chat="Reply" message="I'm here to help! What would you like to know?"></sc-chat-bubble>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-chat-bubble chat="Reply" message="I'm here to help! What would you like to know?"&gt;&lt;/sc-chat-bubble&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Conversation Example</h3>
+        <div class="preview-frame">
+          <sc-chat-bubble chat="Send" message="What's the weather like today?"></sc-chat-bubble>
+          <sc-chat-bubble chat="Reply" message="I don't have access to real-time weather data, but I can help you find weather information for your location."></sc-chat-bubble>
+          <sc-chat-bubble chat="Send" message="That's okay, thanks!"></sc-chat-bubble>
+          <sc-chat-bubble chat="Reply" message="You're welcome! Let me know if you need anything else."></sc-chat-bubble>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Multi-line Content</h3>
+        <div class="preview-frame">
+          <sc-chat-bubble chat="Reply" message="Here are some tips for staying safe online:
+
+1. Use strong, unique passwords
+2. Enable two-factor authentication
+3. Keep your software updated
+4. Be cautious with email attachments"></sc-chat-bubble>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>chat</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Send"</td>
+                <td style="padding: 12px;">Variant type: "Send" (user) or "Reply" (assistant)</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>message</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Text input"</td>
+                <td style="padding: 12px;">Message content to display in the bubble</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-chip</h2>
+      <p>
+        Compact, at-a-glance status indicator. Primarily used within cards to communicate high-level states
+        such as "Critical," "Safe," "Completed," "In Progress," "Dismissed," and "Recommended."
+      </p>
+
+      <div class="component-showcase">
+        <h3>All States</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <sc-chip state="Safe"></sc-chip>
+          <sc-chip state="In progress"></sc-chip>
+          <sc-chip state="Resolved"></sc-chip>
+          <sc-chip state="Recommended"></sc-chip>
+          <sc-chip state="Critical"></sc-chip>
+          <sc-chip state="Dismissed"></sc-chip>
+          <sc-chip state="Completed"></sc-chip>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Without Icons</h3>
+        <div class="preview-frame" style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <sc-chip state="Safe" show-icon="false"></sc-chip>
+          <sc-chip state="Critical" show-icon="false"></sc-chip>
+          <sc-chip state="Completed" show-icon="false"></sc-chip>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-chip state="Safe" show-icon="false"&gt;&lt;/sc-chip&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Without Trailing Icon</h3>
+        <div class="preview-frame" style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <sc-chip state="Safe" show-trailing-icon="false"></sc-chip>
+          <sc-chip state="In progress" show-trailing-icon="false"></sc-chip>
+          <sc-chip state="Critical" show-trailing-icon="false"></sc-chip>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-chip state="Safe" show-trailing-icon="false"&gt;&lt;/sc-chip&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Labels</h3>
+        <div class="preview-frame" style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <sc-chip state="Safe" label="All Clear"></sc-chip>
+          <sc-chip state="Critical" label="Action Required"></sc-chip>
+          <sc-chip state="In progress" label="Processing..."></sc-chip>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-chip state="Safe" label="All Clear"&gt;&lt;/sc-chip&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame" style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <sc-chip id="chip-1" state="Safe"></sc-chip>
+          <sc-chip id="chip-2" state="Critical"></sc-chip>
+          <sc-chip id="chip-3" state="In progress"></sc-chip>
+        </div>
+        <div class="event-log">
+          <h4>Event Log:</h4>
+          <div id="chip-event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>state</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Safe"</td>
+                <td style="padding: 12px;">State variant: "Safe", "In progress", "Resolved", "Recommended", "Critical", "Dismissed", "Completed"</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>label</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">state value</td>
+                <td style="padding: 12px;">Custom label text to display</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-icon</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide the leading icon</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>show-trailing-icon</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide the trailing close icon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px;"><code>close</code></td>
+                <td style="padding: 12px;">Fired when the trailing close icon is clicked</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">State Colors</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">State</th>
+                <th style="text-align: left; padding: 12px;">Background Token</th>
+                <th style="text-align: left; padding: 12px;">Text Token</th>
+                <th style="text-align: left; padding: 12px;">Icon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;">Safe</td>
+                <td style="padding: 12px;"><code>--md-sys-color-positive</code></td>
+                <td style="padding: 12px;"><code>--md-sys-color-on-positive</code></td>
+                <td style="padding: 12px;">check_circle</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;">In progress</td>
+                <td style="padding: 12px;"><code>--md-sys-color-tertiary-container</code></td>
+                <td style="padding: 12px;"><code>--md-sys-color-on-secondary-fixed</code></td>
+                <td style="padding: 12px;">schedule</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;">Resolved</td>
+                <td style="padding: 12px;"><code>--md-sys-color-positive-container</code></td>
+                <td style="padding: 12px;"><code>--md-sys-color-on-positive-container</code></td>
+                <td style="padding: 12px;">verified</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;">Recommended</td>
+                <td style="padding: 12px;"><code>--md-sys-color-warning-container</code></td>
+                <td style="padding: 12px;"><code>--md-sys-color-on-warning-container</code></td>
+                <td style="padding: 12px;">info</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;">Critical</td>
+                <td style="padding: 12px;"><code>--md-sys-color-error</code></td>
+                <td style="padding: 12px;"><code>--md-sys-color-on-error</code></td>
+                <td style="padding: 12px;">warning</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;">Dismissed</td>
+                <td style="padding: 12px;"><code>--md-sys-color-surface-container-high</code></td>
+                <td style="padding: 12px;"><code>--md-sys-color-outline</code></td>
+                <td style="padding: 12px;">arrow_forward</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;">Completed</td>
+                <td style="padding: 12px;"><code>--md-sys-color-positive-container</code></td>
+                <td style="padding: 12px;"><code>--md-sys-color-on-positive-container</code></td>
+                <td style="padding: 12px;">check_circle</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-label-carousel</h2>
+      <p>
+        Horizontal scrollable container of filter chips. Filter chips use tags or descriptive words to filter content.
+        Tapping on a filter chip activates it and changes its appearance to show selection state.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Default</h3>
+        <div class="preview-frame">
+          <sc-label-carousel></sc-label-carousel>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-label-carousel&gt;&lt;/sc-label-carousel&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Labels (Array)</h3>
+        <div class="preview-frame">
+          <sc-label-carousel labels='["All", "Security", "Privacy", "Updates", "Alerts"]'></sc-label-carousel>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-label-carousel labels='["All", "Security", "Privacy", "Updates", "Alerts"]'&gt;&lt;/sc-label-carousel&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Labels (Comma-separated)</h3>
+        <div class="preview-frame">
+          <sc-label-carousel labels="Home, Work, Personal, Family, Friends"></sc-label-carousel>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-label-carousel labels="Home, Work, Personal, Family, Friends"&gt;&lt;/sc-label-carousel&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame">
+          <sc-label-carousel id="carousel-demo" labels='["Critical", "Safe", "In Progress", "Resolved", "Recommended", "Dismissed", "Completed"]'></sc-label-carousel>
+        </div>
+        <div class="event-log">
+          <h4>Selection Log:</h4>
+          <div id="carousel-event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px;"><code>labels</code></td>
+                <td style="padding: 12px;">string | array</td>
+                <td style="padding: 12px;">8 "Label" items</td>
+                <td style="padding: 12px;">JSON array or comma-separated string of label texts</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+                <th style="text-align: left; padding: 12px;">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px;"><code>selection-change</code></td>
+                <td style="padding: 12px;">Fired when chip selection changes</td>
+                <td style="padding: 12px;"><code>{ selected: number[], labels: string[] }</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Visual States</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Deselected:</strong> Transparent background with outline-variant border</li>
+          <li><strong>Selected:</strong> Tertiary-container background, no border</li>
+          <li><strong>Hover:</strong> Slight opacity change</li>
+          <li><strong>Active:</strong> Scale down effect on click</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-progress-indicator</h2>
+      <p>
+        Loading animation used to show active processing. Behaves similarly to ChatGPT typing/loading indicator.
+        Appears inline within the conversation flow to communicate that a response is actively being generated.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Progress Values</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 16px;">
+          <sc-progress-indicator value="0"></sc-progress-indicator>
+          <sc-progress-indicator value="20"></sc-progress-indicator>
+          <sc-progress-indicator value="40"></sc-progress-indicator>
+          <sc-progress-indicator value="60"></sc-progress-indicator>
+          <sc-progress-indicator value="80"></sc-progress-indicator>
+          <sc-progress-indicator value="100"></sc-progress-indicator>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Without Logo</h3>
+        <div class="preview-frame">
+          <sc-progress-indicator value="60" show-logo="false"></sc-progress-indicator>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-progress-indicator value="60" show-logo="false"&gt;&lt;/sc-progress-indicator&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Without Thinking Bubbles</h3>
+        <div class="preview-frame">
+          <sc-progress-indicator value="40" show-loading-bubbles="false"></sc-progress-indicator>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-progress-indicator value="40" show-loading-bubbles="false"&gt;&lt;/sc-progress-indicator&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Loading Text</h3>
+        <div class="preview-frame">
+          <sc-progress-indicator value="60" loading-text="Processing your request..."></sc-progress-indicator>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-progress-indicator value="60" loading-text="Processing your request..."&gt;&lt;/sc-progress-indicator&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Animated Demo</h3>
+        <div class="preview-frame">
+          <sc-progress-indicator id="animated-progress" value="0"></sc-progress-indicator>
+        </div>
+        <div style="margin-top: 16px; display: flex; gap: 8px;">
+          <button onclick="document.getElementById('animated-progress').setAttribute('value', '0')" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--md-sys-color-outline); background: var(--md-sys-color-surface); cursor: pointer;">0%</button>
+          <button onclick="document.getElementById('animated-progress').setAttribute('value', '20')" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--md-sys-color-outline); background: var(--md-sys-color-surface); cursor: pointer;">20%</button>
+          <button onclick="document.getElementById('animated-progress').setAttribute('value', '40')" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--md-sys-color-outline); background: var(--md-sys-color-surface); cursor: pointer;">40%</button>
+          <button onclick="document.getElementById('animated-progress').setAttribute('value', '60')" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--md-sys-color-outline); background: var(--md-sys-color-surface); cursor: pointer;">60%</button>
+          <button onclick="document.getElementById('animated-progress').setAttribute('value', '80')" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--md-sys-color-outline); background: var(--md-sys-color-surface); cursor: pointer;">80%</button>
+          <button onclick="document.getElementById('animated-progress').setAttribute('value', '100')" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--md-sys-color-outline); background: var(--md-sys-color-surface); cursor: pointer;">100%</button>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>value</code></td>
+                <td style="padding: 12px;">number</td>
+                <td style="padding: 12px;">0</td>
+                <td style="padding: 12px;">Progress value (0, 20, 40, 60, 80, 100)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>loading-text</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"On it! Just a moment..."</td>
+                <td style="padding: 12px;">Text to display below the progress indicator</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-loading-bubbles</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide animated thinking bubbles</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-loading-text</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide loading text</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>show-logo</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide McAfee logo in center</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Features</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Circular progress:</strong> Red progress ring that animates based on value</li>
+          <li><strong>Thinking bubbles:</strong> Animated pulsing dots that indicate active processing</li>
+          <li><strong>McAfee logo:</strong> Centered brand icon within the progress circle</li>
+          <li><strong>Loading text:</strong> Customizable message below the indicator</li>
+          <li><strong>Smooth transitions:</strong> Progress updates animate smoothly</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-button-list</h2>
+      <p>
+        Row or group of compact action buttons displayed at the end of a prompt. Suggests next steps the user can take,
+        similar to ChatGPT's suggested action chips. Each button is interactive and can trigger navigation or actions.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Default (No Border)</h3>
+        <div class="preview-frame" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <sc-button-list></sc-button-list>
+          <sc-button-list link-text="Learn more"></sc-button-list>
+          <sc-button-list link-text="Get started"></sc-button-list>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-button-list&gt;&lt;/sc-button-list&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>With Border</h3>
+        <div class="preview-frame" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <sc-button-list border="border"></sc-button-list>
+          <sc-button-list border="border" link-text="View details"></sc-button-list>
+          <sc-button-list border="border" link-text="Share"></sc-button-list>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-button-list border="border"&gt;&lt;/sc-button-list&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Without Icons</h3>
+        <div class="preview-frame" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <sc-button-list show-icon="false" show-trailing-icon="false" link-text="Text only"></sc-button-list>
+          <sc-button-list border="border" show-icon="false" show-trailing-icon="false" link-text="Text only"></sc-button-list>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-button-list show-icon="false" show-trailing-icon="false"&gt;&lt;/sc-button-list&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <sc-button-list id="button-1" link-text="Action 1"></sc-button-list>
+          <sc-button-list id="button-2" border="border" link-text="Action 2"></sc-button-list>
+          <sc-button-list id="button-3" link-text="Action 3"></sc-button-list>
+        </div>
+        <div class="event-log">
+          <h4>Event Log:</h4>
+          <div id="button-event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>border</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"default"</td>
+                <td style="padding: 12px;">Border style: "default" or "border"</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>link-text</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Link text"</td>
+                <td style="padding: 12px;">Button label text</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-icon</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide leading reply icon</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-text</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide button text</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>show-trailing-icon</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide trailing external link icon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px;"><code>click</code></td>
+                <td style="padding: 12px;">Fired when the button is clicked</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Visual States</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Default:</strong> No border, rounded corners (5px)</li>
+          <li><strong>Border:</strong> Primary color border, rounded corners (12px)</li>
+          <li><strong>Hover:</strong> Surface-container background</li>
+          <li><strong>Active:</strong> Scale down effect on click</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-feedback</h2>
+      <p>
+        Provides lightweight, inline post-interaction feedback. Functions like ChatGPT's "Was this helpful?" module.
+        Appears directly below each chat bubble reply with thumbs up/down options.
+      </p>
+
+      <div class="component-showcase">
+        <h3>All States</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 16px; align-items: flex-end;">
+          <sc-feedback></sc-feedback>
+          <sc-feedback state="positive"></sc-feedback>
+          <sc-feedback state="negative"></sc-feedback>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Text</h3>
+        <div class="preview-frame" style="display: flex; justify-content: flex-end;">
+          <sc-feedback text="Did this answer your question?"></sc-feedback>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-feedback text="Did this answer your question?"&gt;&lt;/sc-feedback&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>With Chat Bubble</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 8px;">
+          <sc-chat-bubble chat="Reply" message="I can help you with that! Here's what you need to know..."></sc-chat-bubble>
+          <sc-feedback></sc-feedback>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame" style="display: flex; justify-content: flex-end;">
+          <sc-feedback id="feedback-demo"></sc-feedback>
+        </div>
+        <div class="event-log">
+          <h4>Feedback Log:</h4>
+          <div id="feedback-event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>text</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Was this helpful?"</td>
+                <td style="padding: 12px;">Feedback prompt text</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>state</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"default"</td>
+                <td style="padding: 12px;">Current state: "default", "positive", or "negative"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+                <th style="text-align: left; padding: 12px;">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px;"><code>feedback-change</code></td>
+                <td style="padding: 12px;">Fired when feedback state changes</td>
+                <td style="padding: 12px;"><code>{ state: "default" | "positive" | "negative" }</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Visual States</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Default:</strong> Both icons outlined in outline color</li>
+          <li><strong>Positive:</strong> Thumbs up filled with primary color</li>
+          <li><strong>Negative:</strong> Thumbs down filled with primary color</li>
+          <li><strong>Hover:</strong> Icon scales up slightly</li>
+          <li><strong>Active:</strong> Icon scales down on click</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-salutation</h2>
+      <p>
+        Dedicated text element used for greetings or welcome messaging. Appears only on the homepage or welcome screen,
+        positioned near the top to anchor the page context. Non-interactive and typographically distinct.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Default</h3>
+        <div class="preview-frame">
+          <sc-salutation></sc-salutation>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-salutation&gt;&lt;/sc-salutation&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Different Greetings</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 24px;">
+          <sc-salutation greeting="Good morning" name="John Smith"></sc-salutation>
+          <sc-salutation greeting="Good evening" name="Jane Doe"></sc-salutation>
+          <sc-salutation greeting="Welcome back" name="Alex Johnson"></sc-salutation>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Name</h3>
+        <div class="preview-frame">
+          <sc-salutation greeting="Hello" name="Maria Garcia"></sc-salutation>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-salutation greeting="Hello" name="Maria Garcia"&gt;&lt;/sc-salutation&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>greeting</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Good afternoon"</td>
+                <td style="padding: 12px;">Greeting text (e.g., "Good morning", "Welcome back")</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>name</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Evangelina Schwarzenegger"</td>
+                <td style="padding: 12px;">User's full name to display</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Typography</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Font:</strong> Poppins</li>
+          <li><strong>Size:</strong> 22px</li>
+          <li><strong>Line height:</strong> 28px</li>
+          <li><strong>Letter spacing:</strong> -0.5px</li>
+          <li><strong>Greeting:</strong> Regular weight (400)</li>
+          <li><strong>Name:</strong> Medium weight (500)</li>
+          <li><strong>Color:</strong> on-surface (#1C1B1D)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-side-sheet</h2>
+      <p>
+        Sliding sidebar navigation that adapts to both mobile and desktop layouts. Contains navigation menu items,
+        CTAs, and supporting actions. On mobile, it slides in from the edge; on desktop, it can remain static.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Default</h3>
+        <div class="preview-frame" style="height: 700px;">
+          <sc-side-sheet></sc-side-sheet>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-side-sheet&gt;&lt;/sc-side-sheet&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Title</h3>
+        <div class="preview-frame" style="height: 700px;">
+          <sc-side-sheet title="Navigation Menu"></sc-side-sheet>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-side-sheet title="Navigation Menu"&gt;&lt;/sc-side-sheet&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Without Actions</h3>
+        <div class="preview-frame" style="height: 700px;">
+          <sc-side-sheet show-actions="false"></sc-side-sheet>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-side-sheet show-actions="false"&gt;&lt;/sc-side-sheet&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame" style="height: 700px;">
+          <sc-side-sheet id="side-sheet-demo"></sc-side-sheet>
+        </div>
+        <div class="event-log">
+          <h4>Event Log:</h4>
+          <div id="side-sheet-event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>title</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Title"</td>
+                <td style="padding: 12px;">Header title text</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-back</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide back button</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-close</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide close button</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-logo</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide McAfee logo</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>show-actions</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide action buttons (Save/Cancel)</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>show-footer</code></td>
+                <td style="padding: 12px;">boolean</td>
+                <td style="padding: 12px;">true</td>
+                <td style="padding: 12px;">Show or hide footer with sign out</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+                <th style="text-align: left; padding: 12px;">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>back</code></td>
+                <td style="padding: 12px;">Fired when back button is clicked</td>
+                <td style="padding: 12px;">-</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>close</code></td>
+                <td style="padding: 12px;">Fired when close button is clicked</td>
+                <td style="padding: 12px;">-</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>menu-click</code></td>
+                <td style="padding: 12px;">Fired when a menu item is clicked</td>
+                <td style="padding: 12px;"><code>{ index: number }</code></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>save</code></td>
+                <td style="padding: 12px;">Fired when Save button is clicked</td>
+                <td style="padding: 12px;">-</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>cancel</code></td>
+                <td style="padding: 12px;">Fired when Cancel button is clicked</td>
+                <td style="padding: 12px;">-</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>signout</code></td>
+                <td style="padding: 12px;">Fired when Sign out is clicked</td>
+                <td style="padding: 12px;">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Features</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Header:</strong> Back button, McAfee logo, title, and close button</li>
+          <li><strong>Menu Items:</strong> 10 default navigation items with icons</li>
+          <li><strong>Action Buttons:</strong> Save (filled) and Cancel (outlined)</li>
+          <li><strong>Footer:</strong> Sign out option with icons</li>
+          <li><strong>Dividers:</strong> Separate sections visually</li>
+          <li><strong>Scrollable Content:</strong> Menu items scroll if content exceeds height</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-horizontal-card</h2>
+      <p>
+        Structured card layout that surfaces issues, statuses, and system prompts. Contains issue title, timestamp,
+        status chip, and details link. Cards flex horizontally, presenting all key information in a concise, scannable row.
+      </p>
+
+      <div class="component-showcase">
+        <h3>All States</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 16px;">
+          <sc-horizontal-card state="outlined"></sc-horizontal-card>
+          <sc-horizontal-card state="elevated"></sc-horizontal-card>
+          <sc-horizontal-card state="focused"></sc-horizontal-card>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Different Status Chips</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 16px;">
+          <sc-horizontal-card chip-state="Safe" chip-label="Safe"></sc-horizontal-card>
+          <sc-horizontal-card chip-state="Critical" chip-label="Critical"></sc-horizontal-card>
+          <sc-horizontal-card chip-state="In progress" chip-label="In progress"></sc-horizontal-card>
+          <sc-horizontal-card chip-state="Completed" chip-label="Completed"></sc-horizontal-card>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Content</h3>
+        <div class="preview-frame">
+          <sc-horizontal-card 
+            header="Security Alert Detected" 
+            subhead="2 minutes ago" 
+            link="Show details"
+            description="Suspicious activity detected on your network"
+            status="Active"
+            chip-state="Critical"
+            chip-label="Critical">
+          </sc-horizontal-card>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-horizontal-card header="Security Alert Detected" subhead="2 minutes ago" chip-state="Critical"&gt;&lt;/sc-horizontal-card&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame" style="display: flex; flex-direction: column; gap: 16px;">
+          <sc-horizontal-card id="card-1" header="System Update Available" subhead="1 hour ago" chip-state="Recommended" chip-label="Recommended"></sc-horizontal-card>
+          <sc-horizontal-card id="card-2" header="Scan Complete" subhead="Just now" chip-state="Safe" chip-label="Safe"></sc-horizontal-card>
+          <sc-horizontal-card id="card-3" header="Action Required" subhead="5 minutes ago" chip-state="Critical" chip-label="Critical"></sc-horizontal-card>
+        </div>
+        <div class="event-log">
+          <h4>Event Log:</h4>
+          <div id="card-event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>state</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"outlined"</td>
+                <td style="padding: 12px;">Card state: "outlined", "elevated", or "focused"</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>header</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Header"</td>
+                <td style="padding: 12px;">Main title text</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>subhead</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Subhead"</td>
+                <td style="padding: 12px;">Timestamp or subtitle text</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>link</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Link"</td>
+                <td style="padding: 12px;">Link text (e.g., "Show details")</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>description</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"description"</td>
+                <td style="padding: 12px;">Additional description text</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>status</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"On"</td>
+                <td style="padding: 12px;">Status text displayed on right</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>chip-state</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Safe"</td>
+                <td style="padding: 12px;">Chip state (passed to sc-chip)</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>chip-label</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Safe"</td>
+                <td style="padding: 12px;">Chip label text</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px;"><code>card-click</code></td>
+                <td style="padding: 12px;">Fired when the card is clicked</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Features</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Icon:</strong> Leading mood icon (Material Symbols)</li>
+          <li><strong>Status Chip:</strong> Embedded sc-chip component for status display</li>
+          <li><strong>Status Text:</strong> Right-aligned status indicator</li>
+          <li><strong>Trailing Icon:</strong> Chevron right for navigation hint</li>
+          <li><strong>Content:</strong> Header, subhead, link, and description text</li>
+          <li><strong>States:</strong> Outlined (border), Elevated (shadow), Focused (background)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>sc-bottom-text-input</h2>
+      <p>
+        Primary entry field for sending prompts. Functionally identical to ChatGPT bottom input bar.
+        Anchored at the bottom of the screen with attach, text input, and send/record buttons.
+      </p>
+
+      <div class="component-showcase">
+        <h3>Default State</h3>
+        <div class="preview-frame">
+          <sc-bottom-text-input></sc-bottom-text-input>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-bottom-text-input&gt;&lt;/sc-bottom-text-input&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Custom Placeholder</h3>
+        <div class="preview-frame">
+          <sc-bottom-text-input placeholder="Ask me anything..."></sc-bottom-text-input>
+        </div>
+        <div class="code-block">
+          <code>&lt;sc-bottom-text-input placeholder="Ask me anything..."&gt;&lt;/sc-bottom-text-input&gt;</code>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>Interactive Demo</h3>
+        <div class="preview-frame">
+          <sc-bottom-text-input id="input-demo" placeholder="Type a message..."></sc-bottom-text-input>
+        </div>
+        <div class="event-log">
+          <h4>Event Log:</h4>
+          <div id="input-event-log"></div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <h3>API Reference</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Attribute</th>
+                <th style="text-align: left; padding: 12px;">Type</th>
+                <th style="text-align: left; padding: 12px;">Default</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>placeholder</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">"Input text"</td>
+                <td style="padding: 12px;">Placeholder text for the input field</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>value</code></td>
+                <td style="padding: 12px;">string</td>
+                <td style="padding: 12px;">""</td>
+                <td style="padding: 12px;">Initial value of the input field</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Events</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <th style="text-align: left; padding: 12px;">Event</th>
+                <th style="text-align: left; padding: 12px;">Description</th>
+                <th style="text-align: left; padding: 12px;">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>attach</code></td>
+                <td style="padding: 12px;">Fired when attach button is clicked</td>
+                <td style="padding: 12px;">-</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>send</code></td>
+                <td style="padding: 12px;">Fired when send button is clicked or Enter is pressed</td>
+                <td style="padding: 12px;"><code>{ value: string }</code></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                <td style="padding: 12px;"><code>record</code></td>
+                <td style="padding: 12px;">Fired when record button is clicked</td>
+                <td style="padding: 12px;">-</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px;"><code>input-change</code></td>
+                <td style="padding: 12px;">Fired when input value changes</td>
+                <td style="padding: 12px;"><code>{ value: string }</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 24px;">Features</h3>
+        <ul style="list-style: disc; margin-left: 24px; line-height: 1.8;">
+          <li><strong>Attach Button:</strong> Plus icon for attaching images or files</li>
+          <li><strong>Text Input:</strong> Expandable textarea that grows with content</li>
+          <li><strong>Send Button:</strong> Arrow up icon, active when text is entered</li>
+          <li><strong>Record Button:</strong> Microphone icon for voice input</li>
+          <li><strong>Auto-expand:</strong> Height increases from 56px to 129px when typing</li>
+          <li><strong>Enter to Send:</strong> Press Enter to send (Shift+Enter for new line)</li>
+          <li><strong>State Management:</strong> Automatically switches between default, input, and record states</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./sc-top-navbar.js"></script>
+  <script type="module" src="./sc-chat-bubble.js"></script>
+  <script type="module" src="./sc-chip.js"></script>
+  <script type="module" src="./sc-label-carousel.js"></script>
+  <script type="module" src="./sc-progress-indicator.js"></script>
+  <script type="module" src="./sc-button-list.js"></script>
+  <script type="module" src="./sc-feedback.js"></script>
+  <script type="module" src="./sc-salutation.js"></script>
+  <script type="module" src="./sc-side-sheet.js"></script>
+  <script type="module" src="./sc-horizontal-card.js"></script>
+  <script type="module" src="./sc-bottom-text-input.js"></script>
+  <script>
+    const interactiveNavbar = document.getElementById('interactive-navbar');
+    const eventLog = document.getElementById('event-log');
+
+    function logEvent(eventName) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      eventItem.textContent = `[${timestamp}] ${eventName}`;
+      eventLog.insertBefore(eventItem, eventLog.firstChild);
+      
+      if (eventLog.children.length > 10) {
+        eventLog.removeChild(eventLog.lastChild);
+      }
+    }
+
+    interactiveNavbar.addEventListener('menu-click', () => {
+      logEvent('menu-click event fired');
+    });
+
+    interactiveNavbar.addEventListener('notification-click', () => {
+      logEvent('notification-click event fired');
+    });
+
+    // Chip event listeners
+    const chipEventLog = document.getElementById('chip-event-log');
+    const chips = [
+      document.getElementById('chip-1'),
+      document.getElementById('chip-2'),
+      document.getElementById('chip-3')
+    ];
+
+    function logChipEvent(chipId, eventName) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      eventItem.textContent = `[${timestamp}] ${chipId}: ${eventName}`;
+      chipEventLog.insertBefore(eventItem, chipEventLog.firstChild);
+      
+      if (chipEventLog.children.length > 10) {
+        chipEventLog.removeChild(chipEventLog.lastChild);
+      }
+    }
+
+    chips.forEach((chip, index) => {
+      if (chip) {
+        chip.addEventListener('close', () => {
+          logChipEvent(`chip-${index + 1}`, 'close event fired');
+        });
+      }
+    });
+
+    // Carousel event listeners
+    const carouselDemo = document.getElementById('carousel-demo');
+    const carouselEventLog = document.getElementById('carousel-event-log');
+
+    function logCarouselEvent(detail) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      eventItem.textContent = `[${timestamp}] Selected: [${detail.selected.join(', ')}] - Labels: [${detail.labels.join(', ')}]`;
+      carouselEventLog.insertBefore(eventItem, carouselEventLog.firstChild);
+      
+      if (carouselEventLog.children.length > 10) {
+        carouselEventLog.removeChild(carouselEventLog.lastChild);
+      }
+    }
+
+    if (carouselDemo) {
+      carouselDemo.addEventListener('selection-change', (e) => {
+        logCarouselEvent(e.detail);
+      });
+    }
+
+    // Button list event listeners
+    const buttonEventLog = document.getElementById('button-event-log');
+    const buttons = [
+      document.getElementById('button-1'),
+      document.getElementById('button-2'),
+      document.getElementById('button-3')
+    ];
+
+    function logButtonEvent(buttonId) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      eventItem.textContent = `[${timestamp}] ${buttonId}: click event fired`;
+      buttonEventLog.insertBefore(eventItem, buttonEventLog.firstChild);
+      
+      if (buttonEventLog.children.length > 10) {
+        buttonEventLog.removeChild(buttonEventLog.lastChild);
+      }
+    }
+
+    buttons.forEach((button, index) => {
+      if (button) {
+        button.addEventListener('click', () => {
+          logButtonEvent(`button-${index + 1}`);
+        });
+      }
+    });
+
+    // Feedback event listeners
+    const feedbackDemo = document.getElementById('feedback-demo');
+    const feedbackEventLog = document.getElementById('feedback-event-log');
+
+    function logFeedbackEvent(detail) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      eventItem.textContent = `[${timestamp}] Feedback state changed to: ${detail.state}`;
+      feedbackEventLog.insertBefore(eventItem, feedbackEventLog.firstChild);
+      
+      if (feedbackEventLog.children.length > 10) {
+        feedbackEventLog.removeChild(feedbackEventLog.lastChild);
+      }
+    }
+
+    if (feedbackDemo) {
+      feedbackDemo.addEventListener('feedback-change', (e) => {
+        logFeedbackEvent(e.detail);
+      });
+    }
+
+    // Side sheet event listeners
+    const sideSheetDemo = document.getElementById('side-sheet-demo');
+    const sideSheetEventLog = document.getElementById('side-sheet-event-log');
+
+    function logSideSheetEvent(eventName, detail) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      const detailText = detail ? ` - ${JSON.stringify(detail)}` : '';
+      eventItem.textContent = `[${timestamp}] ${eventName}${detailText}`;
+      sideSheetEventLog.insertBefore(eventItem, sideSheetEventLog.firstChild);
+      
+      if (sideSheetEventLog.children.length > 10) {
+        sideSheetEventLog.removeChild(sideSheetEventLog.lastChild);
+      }
+    }
+
+    if (sideSheetDemo) {
+      sideSheetDemo.addEventListener('back', () => logSideSheetEvent('back'));
+      sideSheetDemo.addEventListener('close', () => logSideSheetEvent('close'));
+      sideSheetDemo.addEventListener('menu-click', (e) => logSideSheetEvent('menu-click', e.detail));
+      sideSheetDemo.addEventListener('save', () => logSideSheetEvent('save'));
+      sideSheetDemo.addEventListener('cancel', () => logSideSheetEvent('cancel'));
+      sideSheetDemo.addEventListener('signout', () => logSideSheetEvent('signout'));
+    }
+
+    // Horizontal card event listeners
+    const cardEventLog = document.getElementById('card-event-log');
+    const cards = [
+      document.getElementById('card-1'),
+      document.getElementById('card-2'),
+      document.getElementById('card-3')
+    ];
+
+    function logCardEvent(cardId) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      eventItem.textContent = `[${timestamp}] ${cardId}: card-click event fired`;
+      cardEventLog.insertBefore(eventItem, cardEventLog.firstChild);
+      
+      if (cardEventLog.children.length > 10) {
+        cardEventLog.removeChild(cardEventLog.lastChild);
+      }
+    }
+
+    cards.forEach((card, index) => {
+      if (card) {
+        card.addEventListener('card-click', () => {
+          logCardEvent(`card-${index + 1}`);
+        });
+      }
+    });
+
+    // Bottom text input event listeners
+    const inputDemo = document.getElementById('input-demo');
+    const inputEventLog = document.getElementById('input-event-log');
+
+    function logInputEvent(eventName, detail) {
+      const timestamp = new Date().toLocaleTimeString();
+      const eventItem = document.createElement('div');
+      eventItem.className = 'event-item';
+      const detailText = detail ? ` - ${JSON.stringify(detail)}` : '';
+      eventItem.textContent = `[${timestamp}] ${eventName}${detailText}`;
+      inputEventLog.insertBefore(eventItem, inputEventLog.firstChild);
+      
+      if (inputEventLog.children.length > 10) {
+        inputEventLog.removeChild(inputEventLog.lastChild);
+      }
+    }
+
+    if (inputDemo) {
+      inputDemo.addEventListener('attach', () => logInputEvent('attach'));
+      inputDemo.addEventListener('send', (e) => logInputEvent('send', e.detail));
+      inputDemo.addEventListener('record', () => logInputEvent('record'));
+      inputDemo.addEventListener('input-change', (e) => logInputEvent('input-change', e.detail));
+    }
+  </script>
+</body>
+</html>

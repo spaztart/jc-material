@@ -1,0 +1,383 @@
+/**
+ * Material Design 3 Tokens - RGA Theme
+ * Generated from tokens/material/rga.json and tokens/modes/rga/light.json
+ * Maps design tokens to Material Web CSS custom properties
+ */
+
+:root {
+  /* Reference Palette - Primary (RGA) */
+  --md-ref-palette-primary0: #000000;
+  --md-ref-palette-primary5: #0C0D2E;
+  --md-ref-palette-primary10: #171839;
+  --md-ref-palette-primary15: #212244;
+  --md-ref-palette-primary20: #2C2D4F;
+  --md-ref-palette-primary25: #37385B;
+  --md-ref-palette-primary30: #434467;
+  --md-ref-palette-primary35: #4E4F73;
+  --md-ref-palette-primary40: #5A5B80;
+  --md-ref-palette-primary50: #73749A;
+  --md-ref-palette-primary60: #8D8DB5;
+  --md-ref-palette-primary70: #A8A8D1;
+  --md-ref-palette-primary80: #C3C3ED;
+  --md-ref-palette-primary90: #E1E0FF;
+  --md-ref-palette-primary95: #F2EFFF;
+  --md-ref-palette-primary98: #FCF8FF;
+  --md-ref-palette-primary99: #FFFBFF;
+  --md-ref-palette-primary100: #FFFFFF;
+
+  /* Reference Palette - Secondary (RGA) */
+  --md-ref-palette-secondary0: #000000;
+  --md-ref-palette-secondary5: #04004C;
+  --md-ref-palette-secondary10: #09006B;
+  --md-ref-palette-secondary15: #0F0089;
+  --md-ref-palette-secondary20: #1400A8;
+  --md-ref-palette-secondary25: #1C07C5;
+  --md-ref-palette-secondary30: #2C24CE;
+  --md-ref-palette-secondary35: #3A35D9;
+  --md-ref-palette-secondary40: #4745E5;
+  --md-ref-palette-secondary50: #6161FF;
+  --md-ref-palette-secondary60: #8183FF;
+  --md-ref-palette-secondary70: #A1A2FF;
+  --md-ref-palette-secondary80: #C1C1FF;
+  --md-ref-palette-secondary90: #E1DFFF;
+  --md-ref-palette-secondary95: #F2EFFF;
+  --md-ref-palette-secondary98: #FCF8FF;
+  --md-ref-palette-secondary99: #FFFBFF;
+  --md-ref-palette-secondary100: #FFFFFF;
+
+  /* Reference Palette - Tertiary (RGA) */
+  --md-ref-palette-tertiary0: #000000;
+  --md-ref-palette-tertiary5: #0D0D2D;
+  --md-ref-palette-tertiary10: #181838;
+  --md-ref-palette-tertiary15: #222343;
+  --md-ref-palette-tertiary20: #2D2D4E;
+  --md-ref-palette-tertiary25: #38385A;
+  --md-ref-palette-tertiary30: #434467;
+  --md-ref-palette-tertiary35: #4F4F74;
+  --md-ref-palette-tertiary40: #5B5B80;
+  --md-ref-palette-tertiary50: #74749A;
+  --md-ref-palette-tertiary60: #8E8DB5;
+  --md-ref-palette-tertiary70: #A8A8D1;
+  --md-ref-palette-tertiary80: #C4C3ED;
+  --md-ref-palette-tertiary90: #E1E0FF;
+  --md-ref-palette-tertiary95: #F4EFFF;
+  --md-ref-palette-tertiary98: #FDF8FF;
+  --md-ref-palette-tertiary99: #FEFBFF;
+  --md-ref-palette-tertiary100: #FFFFFF;
+
+  /* Reference Palette - Error (RGA) */
+  --md-ref-palette-error0: #000000;
+  --md-ref-palette-error5: #320000;
+  --md-ref-palette-error10: #480000;
+  --md-ref-palette-error15: #5D0000;
+  --md-ref-palette-error20: #730000;
+  --md-ref-palette-error25: #8A0000;
+  --md-ref-palette-error30: #A10000;
+  --md-ref-palette-error35: #B80000;
+  --md-ref-palette-error40: #CB0003;
+  --md-ref-palette-error50: #F21821;
+  --md-ref-palette-error60: #FF3F3D;
+  --md-ref-palette-error70: #FF8177;
+  --md-ref-palette-error80: #FFB0A9;
+  --md-ref-palette-error85: #FFCBC3;
+  --md-ref-palette-error90: #FFD8D5;
+  --md-ref-palette-error95: #FFECE9;
+  --md-ref-palette-error98: #FFF8F7;
+  --md-ref-palette-error99: #FFFBFF;
+  --md-ref-palette-error100: #FFFFFF;
+
+  /* Reference Palette - Neutral (RGA) */
+  --md-ref-palette-neutral0: #000000;
+  --md-ref-palette-neutral5: #111112;
+  --md-ref-palette-neutral10: #1C1B1D;
+  --md-ref-palette-neutral15: #262527;
+  --md-ref-palette-neutral20: #313032;
+  --md-ref-palette-neutral25: #3C3B3D;
+  --md-ref-palette-neutral30: #474648;
+  --md-ref-palette-neutral35: #535254;
+  --md-ref-palette-neutral40: #5F5E60;
+  --md-ref-palette-neutral50: #787678;
+  --md-ref-palette-neutral60: #929092;
+  --md-ref-palette-neutral70: #ADAAAC;
+  --md-ref-palette-neutral80: #C9C5C7;
+  --md-ref-palette-neutral90: #E5E1E3;
+  --md-ref-palette-neutral95: #F4F0F2;
+  --md-ref-palette-neutral98: #FCF8FA;
+  --md-ref-palette-neutral99: #FFFBFF;
+  --md-ref-palette-neutral100: #FFFFFF;
+
+  /* Reference Palette - Neutral Variant (RGA) */
+  --md-ref-palette-neutral-variant0: #000000;
+  --md-ref-palette-neutral-variant5: #0F1118;
+  --md-ref-palette-neutral-variant10: #191B23;
+  --md-ref-palette-neutral-variant15: #23252D;
+  --md-ref-palette-neutral-variant20: #2E3038;
+  --md-ref-palette-neutral-variant25: #393B43;
+  --md-ref-palette-neutral-variant30: #45464F;
+  --md-ref-palette-neutral-variant35: #50525A;
+  --md-ref-palette-neutral-variant40: #5C5E67;
+  --md-ref-palette-neutral-variant50: #757780;
+  --md-ref-palette-neutral-variant60: #8F909A;
+  --md-ref-palette-neutral-variant70: #AAAAB4;
+  --md-ref-palette-neutral-variant80: #C5C6D0;
+  --md-ref-palette-neutral-variant90: #E1E2EC;
+  --md-ref-palette-neutral-variant95: #F0F0FA;
+  --md-ref-palette-neutral-variant98: #FAF8FF;
+  --md-ref-palette-neutral-variant99: #FEFBFF;
+  --md-ref-palette-neutral-variant100: #FFFFFF;
+
+  /* Reference Palette - Positive (RGA Extended) */
+  --md-ref-palette-positive0: #000000;
+  --md-ref-palette-positive5: #001512;
+  --md-ref-palette-positive10: #00211D;
+  --md-ref-palette-positive15: #002C28;
+  --md-ref-palette-positive20: #003833;
+  --md-ref-palette-positive25: #00443F;
+  --md-ref-palette-positive30: #00524A;
+  --md-ref-palette-positive35: #006056;
+  --md-ref-palette-positive40: #006C62;
+  --md-ref-palette-positive50: #00897C;
+  --md-ref-palette-positive60: #00A498;
+  --md-ref-palette-positive70: #35C8BB;
+  --md-ref-palette-positive80: #00DFCD;
+  --md-ref-palette-positive90: #00FCEA;
+  --md-ref-palette-positive95: #99FFF5;
+  --md-ref-palette-positive98: #DDFFFA;
+  --md-ref-palette-positive99: #EEFFFC;
+  --md-ref-palette-positive100: #FFFFFF;
+
+  /* Reference Palette - Attention (RGA Extended) */
+  --md-ref-palette-attention0: #000000;
+  --md-ref-palette-attention5: #2B1700;
+  --md-ref-palette-attention10: #3F2300;
+  --md-ref-palette-attention15: #533000;
+  --md-ref-palette-attention20: #683D00;
+  --md-ref-palette-attention25: #7E4B00;
+  --md-ref-palette-attention30: #945900;
+  --md-ref-palette-attention35: #AB6800;
+  --md-ref-palette-attention40: #C27700;
+  --md-ref-palette-attention50: #F29600;
+  --md-ref-palette-attention60: #FFB04A;
+  --md-ref-palette-attention70: #FFCA7D;
+  --md-ref-palette-attention80: #FFE0B0;
+  --md-ref-palette-attention90: #FFF0D9;
+  --md-ref-palette-attention95: #FFF7ED;
+  --md-ref-palette-attention98: #FFFBF7;
+  --md-ref-palette-attention99: #FFFCFA;
+  --md-ref-palette-attention100: #FFFFFF;
+
+  /* Reference Palette - Brand (RGA Extended) */
+  --md-ref-palette-brand0: #000000;
+  --md-ref-palette-brand5: #2D0001;
+  --md-ref-palette-brand10: #410002;
+  --md-ref-palette-brand15: #5C0004;
+  --md-ref-palette-brand20: #690005;
+  --md-ref-palette-brand25: #7E0007;
+  --md-ref-palette-brand30: #93000A;
+  --md-ref-palette-brand35: #C01818;
+  --md-ref-palette-brand40: #C20016;
+  --md-ref-palette-brand50: #FF1C1C;
+  --md-ref-palette-brand60: #FF3D3D;
+  --md-ref-palette-brand70: #FF7070;
+  --md-ref-palette-brand80: #FFA5A5;
+  --md-ref-palette-brand90: #FFD0D0;
+  --md-ref-palette-brand95: #FFE8E8;
+  --md-ref-palette-brand98: #FFF5F5;
+  --md-ref-palette-brand99: #FFFBFB;
+  --md-ref-palette-brand100: #FFFFFF;
+
+  /* System Colors - Light Mode (RGA) */
+  --md-sys-color-primary: #171839;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #171839;
+  --md-sys-color-on-primary-container: #A8A8D1;
+  --md-sys-color-primary-fixed: #E1E0FF;
+  --md-sys-color-primary-fixed-dim: #C3C3ED;
+  --md-sys-color-on-primary-fixed: #171839;
+  --md-sys-color-on-primary-fixed-variant: #434467;
+  --md-sys-color-inverse-primary: #C3C3ED;
+
+  --md-sys-color-secondary: #4745E5;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #6161FF;
+  --md-sys-color-on-secondary-container: #FFFFFF;
+  --md-sys-color-secondary-fixed: #E1DFFF;
+  --md-sys-color-secondary-fixed-dim: #C1C1FF;
+  --md-sys-color-on-secondary-fixed: #09006B;
+  --md-sys-color-on-secondary-fixed-variant: #2C24CE;
+
+  --md-sys-color-tertiary: #5B5B80;
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #E1E0FF;
+  --md-sys-color-on-tertiary-container: #5B5B80;
+  --md-sys-color-tertiary-fixed: #E1E0FF;
+  --md-sys-color-tertiary-fixed-dim: #C4C3ED;
+  --md-sys-color-on-tertiary-fixed: #181838;
+  --md-sys-color-on-tertiary-fixed-variant: #434467;
+
+  --md-sys-color-error: #CB0003;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #FFD8D5;
+  --md-sys-color-on-error-container: #A10000;
+
+  --md-sys-color-background: #FCF8FA;
+  --md-sys-color-on-background: #1C1B1D;
+
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-on-surface: #1C1B1D;
+  --md-sys-color-surface-variant: #E1E2EC;
+  --md-sys-color-on-surface-variant: #45464F;
+  --md-sys-color-surface-dim: #E5E1E3;
+  --md-sys-color-surface-bright: #FFFFFF;
+  --md-sys-color-surface-container-lowest: #FFFFFF;
+  --md-sys-color-surface-container-low: #f6f2f6;
+  --md-sys-color-surface-container: #f0edf0;
+  --md-sys-color-surface-container-high: #ebe7ea;
+  --md-sys-color-surface-container-highest: #e5e1e5;
+  --md-sys-color-surface-tint: #5A5B80;
+
+  --md-sys-color-inverse-surface: #313032;
+  --md-sys-color-inverse-on-surface: #F4F0F2;
+
+  --md-sys-color-outline: #757780;
+  --md-sys-color-outline-variant: #C5C6D0;
+
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+
+  /* Extended Colors (RGA) */
+  --md-sys-color-positive: #006056;
+  --md-sys-color-on-positive: #FFFFFF;
+  --md-sys-color-positive-container: #00FCEA;
+  --md-sys-color-on-positive-container: #00443F;
+
+  --md-sys-color-warning: #7E4B00;
+  --md-sys-color-on-warning: #FFFBF7;
+  --md-sys-color-warning-container: #FFCA7D;
+  --md-sys-color-on-warning-container: #683D00;
+
+  --md-sys-color-mcafee: #C01818;
+  --md-sys-color-on-mcafee: #FFFFFF;
+  --md-sys-color-mcafee-container: #FF1C1C;
+  --md-sys-color-on-mcafee-container: #FFFFFF;
+
+  /* Typography - Font Family */
+  --md-ref-typeface-plain: Poppins, system-ui, -apple-system, sans-serif;
+  --md-ref-typeface-brand: Poppins, system-ui, -apple-system, sans-serif;
+
+  /* Typography - Display */
+  --md-sys-typescale-display-large-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-display-large-weight: 400;
+  --md-sys-typescale-display-large-size: 57px;
+  --md-sys-typescale-display-large-line-height: 64px;
+  --md-sys-typescale-display-large-tracking: -0.25px;
+
+  --md-sys-typescale-display-medium-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-display-medium-weight: 400;
+  --md-sys-typescale-display-medium-size: 45px;
+  --md-sys-typescale-display-medium-line-height: 52px;
+  --md-sys-typescale-display-medium-tracking: 0px;
+
+  --md-sys-typescale-display-small-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-display-small-weight: 400;
+  --md-sys-typescale-display-small-size: 36px;
+  --md-sys-typescale-display-small-line-height: 44px;
+  --md-sys-typescale-display-small-tracking: 0px;
+
+  /* Typography - Headline */
+  --md-sys-typescale-headline-large-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-headline-large-weight: 400;
+  --md-sys-typescale-headline-large-size: 32px;
+  --md-sys-typescale-headline-large-line-height: 40px;
+  --md-sys-typescale-headline-large-tracking: 0px;
+
+  --md-sys-typescale-headline-medium-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-headline-medium-weight: 400;
+  --md-sys-typescale-headline-medium-size: 28px;
+  --md-sys-typescale-headline-medium-line-height: 36px;
+  --md-sys-typescale-headline-medium-tracking: 0px;
+
+  --md-sys-typescale-headline-small-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-headline-small-weight: 400;
+  --md-sys-typescale-headline-small-size: 24px;
+  --md-sys-typescale-headline-small-line-height: 32px;
+  --md-sys-typescale-headline-small-tracking: 0px;
+
+  /* Typography - Title */
+  --md-sys-typescale-title-large-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-title-large-weight: 400;
+  --md-sys-typescale-title-large-size: 22px;
+  --md-sys-typescale-title-large-line-height: 28px;
+  --md-sys-typescale-title-large-tracking: 0px;
+
+  --md-sys-typescale-title-medium-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-title-medium-weight: 500;
+  --md-sys-typescale-title-medium-size: 16px;
+  --md-sys-typescale-title-medium-line-height: 24px;
+  --md-sys-typescale-title-medium-tracking: 0.15px;
+
+  --md-sys-typescale-title-small-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-title-small-weight: 500;
+  --md-sys-typescale-title-small-size: 24px;
+  --md-sys-typescale-title-small-line-height: 32px;
+  --md-sys-typescale-title-small-tracking: 0.1px;
+
+  /* Typography - Label */
+  --md-sys-typescale-label-large-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-label-large-weight: 500;
+  --md-sys-typescale-label-large-size: 14px;
+  --md-sys-typescale-label-large-line-height: 20px;
+  --md-sys-typescale-label-large-tracking: 0.1px;
+
+  --md-sys-typescale-label-medium-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-label-medium-weight: 500;
+  --md-sys-typescale-label-medium-size: 12px;
+  --md-sys-typescale-label-medium-line-height: 16px;
+  --md-sys-typescale-label-medium-tracking: 0.5px;
+
+  --md-sys-typescale-label-small-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-label-small-weight: 500;
+  --md-sys-typescale-label-small-size: 11px;
+  --md-sys-typescale-label-small-line-height: 16px;
+  --md-sys-typescale-label-small-tracking: 0.5px;
+
+  /* Typography - Body */
+  --md-sys-typescale-body-large-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-body-large-weight: 400;
+  --md-sys-typescale-body-large-size: 16px;
+  --md-sys-typescale-body-large-line-height: 24px;
+  --md-sys-typescale-body-large-tracking: 0.5px;
+
+  --md-sys-typescale-body-medium-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-body-medium-weight: 400;
+  --md-sys-typescale-body-medium-size: 14px;
+  --md-sys-typescale-body-medium-line-height: 20px;
+  --md-sys-typescale-body-medium-tracking: 0.25px;
+
+  --md-sys-typescale-body-small-font: Poppins, system-ui, -apple-system, sans-serif;
+  --md-sys-typescale-body-small-weight: 400;
+  --md-sys-typescale-body-small-size: 12px;
+  --md-sys-typescale-body-small-line-height: 16px;
+  --md-sys-typescale-body-small-tracking: 0.4px;
+
+  /* State Layers */
+  --md-sys-state-hover-state-layer-opacity: 0.08;
+  --md-sys-state-focus-state-layer-opacity: 0.1;
+  --md-sys-state-pressed-state-layer-opacity: 0.1;
+  --md-sys-state-dragged-state-layer-opacity: 0.16;
+  --md-sys-state-disabled-state-layer-opacity: 0.38;
+
+  /* Spacing */
+  --md-sys-spacing-100: 4px;
+  --md-sys-spacing-200: 8px;
+  --md-sys-spacing-300: 12px;
+  --md-sys-spacing-400: 16px;
+  --md-sys-spacing-500: 20px;
+  --md-sys-spacing-600: 24px;
+  --md-sys-spacing-700: 28px;
+  --md-sys-spacing-800: 32px;
+  --md-sys-spacing-900: 36px;
+  --md-sys-spacing-1000: 40px;
+  --md-sys-spacing-1100: 44px;
+  --md-sys-spacing-1200: 48px;
+}
