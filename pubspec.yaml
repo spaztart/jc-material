@@ -1,0 +1,27 @@
+name: pegasus_flutter
+description: "A comprehensive Flutter design system providing reusable UI components, design tokens, themes, and interactive component documentation for building consistent McAfee-branded applications across web, iOS, and Android platforms."
+publish_to: "none"
+version: 0.6.0
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10
+  google_fonts: ^6.3.2
+  mc_flutter_tokens:
+    git:
+      url: https://github.com/mcafee-eng/mc_flutter_tokens.git
+      ref: main
+    # version: ^0.3.3
+  # path: ../mc_flutter_tokens
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
