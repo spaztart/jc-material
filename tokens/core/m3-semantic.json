@@ -1,0 +1,287 @@
+{
+  "$type": "color",
+  "$description": "Material 3 semantic tokens - references M3 palettes",
+  "m3": {
+    "sys": {
+      "light": {
+        "primary": {
+          "$value": "{m3.ref.palette.primary.40}",
+          "$description": "Primary brand color in light theme"
+        },
+        "on-primary": {
+          "$value": "{m3.ref.palette.primary.100}"
+        },
+        "primary-container": {
+          "$value": "{m3.ref.palette.primary.90}"
+        },
+        "on-primary-container": {
+          "$value": "{m3.ref.palette.primary.10}"
+        },
+        "secondary": {
+          "$value": "{m3.ref.palette.secondary.40}"
+        },
+        "on-secondary": {
+          "$value": "{m3.ref.palette.secondary.100}"
+        },
+        "secondary-container": {
+          "$value": "{m3.ref.palette.secondary.90}"
+        },
+        "on-secondary-container": {
+          "$value": "{m3.ref.palette.secondary.10}"
+        },
+        "tertiary": {
+          "$value": "{m3.ref.palette.tertiary.40}"
+        },
+        "on-tertiary": {
+          "$value": "{m3.ref.palette.tertiary.100}"
+        },
+        "tertiary-container": {
+          "$value": "{m3.ref.palette.tertiary.90}"
+        },
+        "on-tertiary-container": {
+          "$value": "{m3.ref.palette.tertiary.10}"
+        },
+        "error": {
+          "$value": "{m3.ref.palette.error.40}"
+        },
+        "on-error": {
+          "$value": "{m3.ref.palette.error.100}"
+        },
+        "error-container": {
+          "$value": "{m3.ref.palette.error.90}"
+        },
+        "on-error-container": {
+          "$value": "{m3.ref.palette.error.10}"
+        },
+        "surface": {
+          "$value": "{m3.ref.palette.neutral.98}"
+        },
+        "on-surface": {
+          "$value": "{m3.ref.palette.neutral.10}"
+        },
+        "surface-variant": {
+          "$value": "{m3.ref.palette.neutral-variant.90}"
+        },
+        "on-surface-variant": {
+          "$value": "{m3.ref.palette.neutral-variant.30}"
+        },
+        "outline": {
+          "$value": "{m3.ref.palette.neutral-variant.50}"
+        },
+        "outline-variant": {
+          "$value": "{m3.ref.palette.neutral-variant.80}"
+        }
+      },
+      "dark": {
+        "primary": {
+          "$value": "{m3.ref.palette.primary.80}"
+        },
+        "on-primary": {
+          "$value": "{m3.ref.palette.primary.20}"
+        },
+        "primary-container": {
+          "$value": "{m3.ref.palette.primary.30}"
+        },
+        "on-primary-container": {
+          "$value": "{m3.ref.palette.primary.90}"
+        },
+        "secondary": {
+          "$value": "{m3.ref.palette.secondary.80}"
+        },
+        "on-secondary": {
+          "$value": "{m3.ref.palette.secondary.20}"
+        },
+        "secondary-container": {
+          "$value": "{m3.ref.palette.secondary.30}"
+        },
+        "on-secondary-container": {
+          "$value": "{m3.ref.palette.secondary.90}"
+        },
+        "surface": {
+          "$value": "{m3.ref.palette.neutral.6}"
+        },
+        "on-surface": {
+          "$value": "{m3.ref.palette.neutral.90}"
+        }
+      }
+    },
+    "ref": {
+      "palette": {
+        "primary": {
+          "0": {
+            "$value": "#000000"
+          },
+          "10": {
+            "$value": "#001C38"
+          },
+          "20": {
+            "$value": "#00325A"
+          },
+          "30": {
+            "$value": "#1D4875"
+          },
+          "40": {
+            "$value": "#38608F"
+          },
+          "50": {
+            "$value": "#5078A9"
+          },
+          "60": {
+            "$value": "#6991C4"
+          },
+          "70": {
+            "$value": "#83ABE0"
+          },
+          "80": {
+            "$value": "#A2C9FE"
+          },
+          "90": {
+            "$value": "#D2E4FF"
+          },
+          "95": {
+            "$value": "#EAF1FF"
+          },
+          "98": {
+            "$value": "#F8F9FF"
+          },
+          "99": {
+            "$value": "#FDFCFF"
+          },
+          "100": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "secondary": {
+          "0": {
+            "$value": "#000000"
+          },
+          "10": {
+            "$value": "#111C29"
+          },
+          "20": {
+            "$value": "#26313F"
+          },
+          "30": {
+            "$value": "#3C4856"
+          },
+          "40": {
+            "$value": "#545F6F"
+          },
+          "80": {
+            "$value": "#BBC7D9"
+          },
+          "90": {
+            "$value": "#D7E3F6"
+          },
+          "100": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "tertiary": {
+          "0": {
+            "$value": "#000000"
+          },
+          "10": {
+            "$value": "#101B32"
+          },
+          "20": {
+            "$value": "#263048"
+          },
+          "30": {
+            "$value": "#3C4660"
+          },
+          "40": {
+            "$value": "#545E79"
+          },
+          "80": {
+            "$value": "#BCC6E5"
+          },
+          "90": {
+            "$value": "#D9E2FF"
+          },
+          "100": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "error": {
+          "0": {
+            "$value": "#000000"
+          },
+          "10": {
+            "$value": "#410002"
+          },
+          "20": {
+            "$value": "#690005"
+          },
+          "30": {
+            "$value": "#93000A"
+          },
+          "40": {
+            "$value": "#BA1A1A"
+          },
+          "80": {
+            "$value": "#FFB4AB"
+          },
+          "90": {
+            "$value": "#FFDAD6"
+          },
+          "100": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "neutral": {
+          "0": {
+            "$value": "#000000"
+          },
+          "6": {
+            "$value": "#111418"
+          },
+          "10": {
+            "$value": "#1A1C1E"
+          },
+          "20": {
+            "$value": "#2F3033"
+          },
+          "30": {
+            "$value": "#46474A"
+          },
+          "50": {
+            "$value": "#76777A"
+          },
+          "80": {
+            "$value": "#C6C6CA"
+          },
+          "90": {
+            "$value": "#E3E2E6"
+          },
+          "95": {
+            "$value": "#F1F0F4"
+          },
+          "98": {
+            "$value": "#FAF9FD"
+          },
+          "99": {
+            "$value": "#FDFCFF"
+          },
+          "100": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "neutral-variant": {
+          "30": {
+            "$value": "#43474E"
+          },
+          "50": {
+            "$value": "#73777F"
+          },
+          "80": {
+            "$value": "#C3C6CF"
+          },
+          "90": {
+            "$value": "#DFE2EB"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$description": "Dark theme - Combines M3 semantic tokens with McAfee brand overrides",
+  "$type": "color",
+  "theme": {
+    "dark": {
+      "surface": {
+        "primary": {
+          "$value": "{neutral.900}",
+          "$description": "Primary surface color"
+        },
+        "secondary": {
+          "$value": "{neutral.800}"
+        },
+        "tertiary": {
+          "$value": "{neutral.700}"
+        }
+      },
+      "text": {
+        "primary": {
+          "$value": "{brand.white}"
+        },
+        "secondary": {
+          "$value": "{neutral.300}"
+        },
+        "tertiary": {
+          "$value": "{neutral.500}"
+        },
+        "inverse": {
+          "$value": "{neutral.900}"
+        }
+      },
+      "border": {
+        "default": {
+          "$value": "{neutral.700}"
+        },
+        "subtle": {
+          "$value": "{neutral.800}"
+        },
+        "strong": {
+          "$value": "{neutral.500}"
+        }
+      },
+      "action": {
+        "primary": {
+          "$value": "{brand.white}",
+          "$description": "Primary action color (buttons) - inverted for dark mode"
+        },
+        "secondary": {
+          "$value": "{blue.400}",
+          "$description": "Secondary actions (links, checkboxes)"
+        },
+        "danger": {
+          "$value": "{red.400}"
+        }
+      },
+      "state": {
+        "hover": {
+          "$value": "rgba(255, 255, 255, 0.08)"
+        },
+        "pressed": {
+          "$value": "rgba(255, 255, 255, 0.12)"
+        },
+        "focus": {
+          "$value": "{blue.400}"
+        },
+        "disabled": {
+          "$value": "{neutral.700}"
+        }
+      }
+    }
+  }
+}

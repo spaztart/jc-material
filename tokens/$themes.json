@@ -1,0 +1,28 @@
+[
+  {
+    "id": "light",
+    "name": "Light",
+    "selectedTokenSets": {
+      "core/brand": "enabled",
+      "core/m3-semantic": "enabled",
+      "themes/light": "enabled",
+      "components/button": "enabled",
+      "components/form": "enabled",
+      "components/card": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  },
+  {
+    "id": "dark",
+    "name": "Dark",
+    "selectedTokenSets": {
+      "core/brand": "enabled",
+      "core/m3-semantic": "enabled",
+      "themes/dark": "enabled",
+      "components/button": "enabled",
+      "components/form": "enabled",
+      "components/card": "enabled"
+    },
+    "$figmaStyleReferences": {}
+  }
+]

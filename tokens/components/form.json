@@ -1,0 +1,113 @@
+{
+  "$type": "color",
+  "$description": "Form component tokens - Checkboxes, radios, inputs",
+  "checkbox": {
+    "unselected": {
+      "border": {
+        "$value": "{neutral.600}"
+      },
+      "background": {
+        "$value": "transparent"
+      }
+    },
+    "selected": {
+      "background": {
+        "$value": "{brand.blue}",
+        "$description": "McAfee override: Blue for selected state"
+      },
+      "icon": {
+        "$value": "{brand.white}"
+      }
+    },
+    "hover": {
+      "border": {
+        "$value": "{brand.blue}"
+      }
+    },
+    "disabled": {
+      "border": {
+        "$value": "{neutral.300}"
+      },
+      "background": {
+        "$value": "{neutral.100}"
+      }
+    }
+  },
+  "radio": {
+    "unselected": {
+      "border": {
+        "$value": "{neutral.600}"
+      },
+      "background": {
+        "$value": "transparent"
+      }
+    },
+    "selected": {
+      "border": {
+        "$value": "{brand.blue}",
+        "$description": "McAfee override: Blue for selected state"
+      },
+      "dot": {
+        "$value": "{brand.blue}"
+      }
+    },
+    "hover": {
+      "border": {
+        "$value": "{brand.blue}"
+      }
+    },
+    "disabled": {
+      "border": {
+        "$value": "{neutral.300}"
+      }
+    }
+  },
+  "input": {
+    "background": {
+      "$value": "{brand.white}"
+    },
+    "border": {
+      "$value": "{neutral.400}"
+    },
+    "text": {
+      "$value": "{neutral.900}"
+    },
+    "placeholder": {
+      "$value": "{neutral.500}"
+    },
+    "focus": {
+      "border": {
+        "$value": "{brand.blue}"
+      }
+    },
+    "error": {
+      "border": {
+        "$value": "{brand.red}"
+      },
+      "text": {
+        "$value": "{red.700}"
+      }
+    },
+    "disabled": {
+      "background": {
+        "$value": "{neutral.100}"
+      },
+      "text": {
+        "$value": "{neutral.500}"
+      }
+    }
+  },
+  "switch": {
+    "track": {
+      "off": {
+        "$value": "{neutral.400}"
+      },
+      "on": {
+        "$value": "{brand.blue}"
+      }
+    },
+    "thumb": {
+      "$value": "{brand.white}"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "$type": "color",
+  "$description": "Foundation brand color primitives - McAfee MVP",
+  "brand": {
+    "red": {
+      "$value": "#C01818",
+      "$description": "McAfee primary brand red"
+    },
+    "blue": {
+      "$value": "#0077CD",
+      "$description": "McAfee secondary brand blue"
+    },
+    "black": {
+      "$value": "#000000",
+      "$description": "McAfee brand black for primary actions"
+    },
+    "white": {
+      "$value": "#FFFFFF",
+      "$description": "Pure white"
+    }
+  },
+  "neutral": {
+    "0": {
+      "$value": "#000000"
+    },
+    "50": {
+      "$value": "#F8F9FA"
+    },
+    "100": {
+      "$value": "#F1F3F4"
+    },
+    "200": {
+      "$value": "#E8EAED"
+    },
+    "300": {
+      "$value": "#DADCE0"
+    },
+    "400": {
+      "$value": "#BDC1C6"
+    },
+    "500": {
+      "$value": "#9AA0A6"
+    },
+    "600": {
+      "$value": "#80868B"
+    },
+    "700": {
+      "$value": "#5F6368"
+    },
+    "800": {
+      "$value": "#3C4043"
+    },
+    "900": {
+      "$value": "#202124"
+    },
+    "1000": {
+      "$value": "#FFFFFF"
+    }
+  },
+  "blue": {
+    "50": {
+      "$value": "#E8F0FE"
+    },
+    "100": {
+      "$value": "#D2E3FC"
+    },
+    "200": {
+      "$value": "#AECBFA"
+    },
+    "300": {
+      "$value": "#8AB4F8"
+    },
+    "400": {
+      "$value": "#669DF6"
+    },
+    "500": {
+      "$value": "#4285F4"
+    },
+    "600": {
+      "$value": "#1A73E8"
+    },
+    "700": {
+      "$value": "#1967D2"
+    },
+    "800": {
+      "$value": "#185ABC"
+    },
+    "900": {
+      "$value": "#174EA6"
+    }
+  },
+  "red": {
+    "50": {
+      "$value": "#FCE8E6"
+    },
+    "100": {
+      "$value": "#FAD2CF"
+    },
+    "200": {
+      "$value": "#F6AEA9"
+    },
+    "300": {
+      "$value": "#F28B82"
+    },
+    "400": {
+      "$value": "#EE675C"
+    },
+    "500": {
+      "$value": "#EA4335"
+    },
+    "600": {
+      "$value": "#D93025"
+    },
+    "700": {
+      "$value": "#C5221F"
+    },
+    "800": {
+      "$value": "#B31412"
+    },
+    "900": {
+      "$value": "#A50E0E"
+    }
+  },
+  "gradient": {
+    "blue-purple": {
+      "$value": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      "$description": "Expressive gradient for cards"
+    },
+    "ocean": {
+      "$value": "linear-gradient(135deg, #0077CD 0%, #00C9FF 100%)",
+      "$description": "Ocean blue gradient"
+    },
+    "sunset": {
+      "$value": "linear-gradient(135deg, #C01818 0%, #FF6B6B 100%)",
+      "$description": "Warm sunset gradient"
+    },
+    "slate": {
+      "$value": "linear-gradient(135deg, #3C4043 0%, #5F6368 100%)",
+      "$description": "Subtle slate gradient"
+    }
+  }
+}

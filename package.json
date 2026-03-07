@@ -1,0 +1,26 @@
+{
+  "name": "@mcafee/design-tokens",
+  "version": "0.1.0",
+  "description": "McAfee Design Tokens - Material 3 + Brand Overrides",
+  "main": "build/js/tokens.js",
+  "types": "build/js/tokens.d.ts",
+  "scripts": {
+    "build": "style-dictionary build --config config.json",
+    "build:watch": "nodemon --watch tokens --exec npm run build",
+    "clean": "rm -rf build"
+  },
+  "keywords": [
+    "design-tokens",
+    "material-design",
+    "mcafee",
+    "design-system"
+  ],
+  "devDependencies": {
+    "style-dictionary": "^3.9.0",
+    "nodemon": "^3.0.0"
+  },
+  "files": [
+    "build",
+    "tokens"
+  ]
+}

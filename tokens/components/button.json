@@ -1,0 +1,77 @@
+{
+  "$type": "color",
+  "$description": "Button component tokens - McAfee brand overrides",
+  "button": {
+    "primary": {
+      "background": {
+        "$value": "{brand.black}",
+        "$description": "McAfee override: Black buttons for primary actions"
+      },
+      "text": {
+        "$value": "{brand.white}"
+      },
+      "hover": {
+        "background": {
+          "$value": "{neutral.900}"
+        }
+      },
+      "pressed": {
+        "background": {
+          "$value": "{neutral.800}"
+        }
+      },
+      "disabled": {
+        "background": {
+          "$value": "{neutral.300}"
+        },
+        "text": {
+          "$value": "{neutral.500}"
+        }
+      }
+    },
+    "secondary": {
+      "background": {
+        "$value": "transparent",
+        "$description": "Outlined button"
+      },
+      "text": {
+        "$value": "{brand.black}"
+      },
+      "border": {
+        "$value": "{neutral.700}"
+      },
+      "hover": {
+        "background": {
+          "$value": "{neutral.50}"
+        }
+      }
+    },
+    "tertiary": {
+      "background": {
+        "$value": "transparent",
+        "$description": "Text button"
+      },
+      "text": {
+        "$value": "{brand.blue}"
+      },
+      "hover": {
+        "background": {
+          "$value": "{blue.50}"
+        }
+      }
+    },
+    "danger": {
+      "background": {
+        "$value": "{brand.red}"
+      },
+      "text": {
+        "$value": "{brand.white}"
+      },
+      "hover": {
+        "background": {
+          "$value": "{red.700}"
+        }
+      }
+    }
+  }
+}
